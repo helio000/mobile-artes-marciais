@@ -3,7 +3,7 @@ import { Platform, SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import { WebView } from 'react-native-webview';
 
 export default function Index() {
-  const siteUrl = 'https://helio000.github.io/web-projeto2/';
+  const siteUrl = ' https://helio000.github.io/web-projeto2/';
 
   if (Platform.OS === 'web') {
     return (

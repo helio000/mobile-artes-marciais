@@ -27,9 +27,11 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 <img src="fotos/app3.png" alt="teste 3" width="1000"/>
 
 ## teste 4
-<img src="fotos/app4.png" alt="teste 4" width="1000"/>
+<img src="fotos/app7.png" alt="teste 4" width="1000"/>
 
 ## teste 5
-<img src="fotos/app5.png" alt="teste 4" width="1000"/>
+<img src="fotos/app5.png" alt="teste 5" width="1000"/>
 
+## teste 5
+<img src="fotos/app6.png" alt="teste 6" width="1000"/>
 
