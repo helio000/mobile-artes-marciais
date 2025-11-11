@@ -12,6 +12,11 @@
    ```bash
    npx expo start
    ```
+3. para outras pessoas acessar o seu aplicativo simultaneamente (for other people to access your app simultaneously.)
+
+ ```bash
+   npx expo start --tunnel
+   ```
 
    ## testes do moblie (mobile tests)
 
