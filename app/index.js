@@ -4,6 +4,7 @@ import { WebView } from 'react-native-webview';
 
 export const API_URL = "https://back-projeto-2025.vercel.app"; // 👈 Aqui
 
+
 export default function Index() {
   const siteUrl = 'https://helio000.github.io/web-projeto2/';
 
