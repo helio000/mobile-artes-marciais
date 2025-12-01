@@ -1,45 +1,117 @@
+Este repositório contém o **aplicativo mobile** do projeto de TCC “Plataforma de Artes Marciais”, desenvolvido utilizando **React Native com Expo**.  
+O app funciona como uma versão mobile do site oficial, carregando o conteúdo via **WebView** e conectando diretamente com o **backend hospedado na Vercel**.
 
-## Instalar dependências (Install dependencies)
+---
 
-1. Install dependencies
+## 📌 Clonar o repositório
 
-   ```bash
-   npm install
-   ```
+Antes de instalar as dependências, você precisa clonar o projeto:
 
-2. Start the app (Inicie o aplicativo)
+```bash
+git clone https://github.com/helio000/NOME_DO_REPOSITORIO.git
+cd NOME_DO_REPOSITORIO
+Substitua NOME_DO_REPOSITORIO pelo nome real do seu repositório.
 
-   ```bash
-   npx expo start
-   ```
-3. para outras pessoas acessar o seu aplicativo simultaneamente (for other people to access your app simultaneously.)
+⚙️ Tecnologias Utilizadas
+Tecnologia	Função
+React Native	Estrutura do app mobile
+Expo	Ambiente de desenvolvimento e build
+Expo Router	Navegação e organização de telas
+WebView (react-native-webview)	Exibe o site dentro do app
+GitHub Pages	Hospedagem do site
+Vercel	Hospedagem do backend/API
 
- ```bash
-   npx expo start --tunnel
-   ```
+📁 Estrutura do Projeto
+bash
+Copiar código
+app/
+ ├─ _layout.js       → Configuração geral do Expo Router
+ ├─ index.js         → Carrega o site dentro do WebView
+assets/               → Imagens internas do projeto
+fotos/                → Imagens para o README/testes
+🚀 Instalação e Execução
+1️⃣ Instalar dependências
+bash
+Copiar código
+npm install
+2️⃣ Iniciar o aplicativo
+bash
+Copiar código
+npx expo start
+3️⃣ Permitir que outras pessoas acessem o app simultaneamente
+bash
+Copiar código
+npx expo start --tunnel
+Com isso, qualquer pessoa com o QR Code gerado pelo Expo poderá abrir o aplicativo em tempo real no celular.
 
-   ## testes do moblie (mobile tests)
+🌐 Como funciona o app
+Para celulares Android/iOS → usa WebView para abrir o site dentro do app
 
-## TESTE (TEST) 01
-<img src="fotos/app.png" alt="teste1" width="1000"/>
+Para navegador web → usa iframe para exibir o site
 
-##  TESTE (TEST) 02
-<img src="fotos/app2.png" alt="teste 2" width="1000"/>
+Conecta ao backend através da constante API_URL
 
-## TESTE (TEST) 03
-<img src="fotos/app3.png" alt="teste 3" width="1000"/>
+Código principal (index.js)
+javascript
+Copiar código
+export const API_URL = "https://back-projeto-2025.vercel.app";
+const siteUrl = 'https://helio000.github.io/web-projeto2/';
+Layout do app (_layout.js)
+Controla tema claro/escuro automaticamente
 
-## TESTE (TEST) 04
-<img src="fotos/app7.png" alt="teste 4" width="1000"/>
+Remove headers padrão de navegação
 
-## TESTE (TEST) 05
-<img src="fotos/app5.png" alt="teste 5" width="1000"/>
+Configura a tela principal e telas modais
 
-## TESTE (TEST) 06
-<img src="fotos/app6.png" alt="teste 6" width="1000"/>
+📱 Testes do Mobile (Mobile Tests)
+A seguir estão imagens reais do aplicativo em execução:
 
-## TESTE (TEST) 07
-<img src="fotos/aplicativo5.1.png" alt="teste 6" width="1000"/>
+🧪 TESTE 01
+<img src="/mobile-artes-marciais/fotos/app.png" alt="teste1" width="1000"/>
+🧪 TESTE 02
+<img src="/mobile-artes-marciais/fotos/app2.png" alt="teste2" width="1000"/>
+🧪 TESTE 03
+<img src="/mobile-artes-marciais/fotos/app3.png" alt="teste3" width="1000"/>
+🧪 TESTE 04
+<img src="/mobile-artes-marciais/fotos/app4.png" alt="teste4" width="1000"/>
+🧪 TESTE 05
+<img src="/mobile-artes-marciais/fotos/app5.png" alt="teste5" width="1000"/>
+🧪 TESTE 06
+<img src="/mobile-artes-marciais/fotos/app6.png" alt="teste6" width="1000"/>
+🧪 TESTE 07
+<img src="/mobile-artes-marciais/fotos/app7.png" alt="teste7" width="1000"/>
+🧪 TESTE 08
+<img src="/mobile-artes-marciais/fotos/app8.png" alt="teste8" width="1000"/>
+📦 Gerar APK / AAB (Android)
+Instale Expo CLI globalmente (se ainda não tiver):
 
-## TESTE (TEST) 08
-<img src="fotos/aplicativo5.png" alt="teste 6" width="1000"/>
+bash
+Copiar código
+npm install -g expo-cli
+Build do APK (Android):
+
+bash
+Copiar código
+eas build --platform android
+Build do AAB (Android, para publicar na Play Store):
+
+bash
+Copiar código
+eas build --platform android --profile production
+Para mais detalhes, consulte a documentação do Expo EAS.
+
+👨‍💻 Desenvolvedor
+Helio Alves de Oliveira
+Estudante de Desenvolvimento de Sistemas – TCC 2025
+Escola Júlia Calhau Rodrigues
+
+📝 Observações
+Aplicativo compatível com Android e iOS
+
+Estrutura organizada para apresentação de TCC
+
+Pronto para integração futura com backend/API
+
+Fácil manutenção e atualização
+
+Pode ser publicado futuramente na Play Store
