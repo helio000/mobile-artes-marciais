@@ -1,68 +1,137 @@
-Este repositório contém o **aplicativo mobile** do projeto de TCC “Plataforma de Artes Marciais”, desenvolvido utilizando **React Native com Expo**.  
-O app funciona como uma versão mobile do site oficial, carregando o conteúdo via **WebView** e conectando diretamente com o **backend hospedado na Vercel**.
+1. ## clona o meu repositorio
+https://github.com/helio000/mobile-artes-marciais/tree/master
 
----
+2. # abra o terminal e digita
+cd mobile-artes-marciais
 
-## 📌 Clonar o repositório
+3. ## Instalar dependências (Install dependencies)
 
-Antes de instalar as dependências, você precisa clonar o projeto:
+
+ Install dependencies
+
+   ```bash
+   npm install
+   ```
+
+ Launch the application on your own computer. (Inicie o aplicativo no seu proprio computador)
+
+   ```bash
+   npx expo start
+   ```
+   ## usar esse comando para ver no celular
+
+ ```bash
+   npx expo start --tunnel
+   ```
+
+. para acessar o seu app e ver no seu celular e so usar o codigo embaixo (To access your app and view it on your phone, just use the code below.)
+
+## E so acessar o link que vai aparecer no https exemplo embaixo
+
+https://as-kzxu-anonymous-8081.exp.direct/
+
+ ## tem que criar um arquivo dentro da pasta app chamado index.js
+
+ ```bash
+import React from 'react';
+import { Platform, SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import { WebView } from 'react-native-webview';
+
+export const API_URL = "https://back-projeto-2025.vercel.app"; // 👈 Aqui e o seu back no vercel
+
+
+export default function Index() {
+  const siteUrl = 'https://helio000.github.io/web-projeto2/'; aqui e o pages do seu web
+
+  // Aqui você pode usar o API_URL se precisar fazer fetch ou axios futuramente
+  console.log("Conectado ao backend:", API_URL);
+
+  if (Platform.OS === 'web') {
+    return (
+      <SafeAreaView style={{ flex: 1 }}>
+        <iframe
+          src={siteUrl}
+          style={{ width: '100%', height: '100%', border: 'none' }}
+          title="App Web Preview"
+        />
+      </SafeAreaView>
+    );
+  }
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <WebView
+        source={{ uri: siteUrl }}
+        style={{ flex: 1 }}
+        startInLoadingState={true}
+      />
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+  },
+});
+ ```
+ 
+
+ ## E muda de codigo da pasta chamada _layout.tsx q esta dentro da pasta app
 
 ```bash
-git clone https://github.com/helio000/NOME_DO_REPOSITORIO.git
-cd NOME_DO_REPOSITORIO
-Substitua NOME_DO_REPOSITORIO pelo nome real do seu repositório.
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { Stack } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import 'react-native-reanimated';
 
-⚙️ Tecnologias Utilizadas
-Tecnologia	Função
-React Native	Estrutura do app mobile
-Expo	Ambiente de desenvolvimento e build
-Expo Router	Navegação e organização de telas
-WebView (react-native-webview)	Exibe o site dentro do app
-GitHub Pages	Hospedagem do site
-Vercel	Hospedagem do backend/API
+import { useColorScheme } from '@/hooks/use-color-scheme';
 
-📁 Estrutura do Projeto
-bash
-Copiar código
-app/
- ├─ _layout.js       → Configuração geral do Expo Router
- ├─ index.js         → Carrega o site dentro do WebView
-assets/               → Imagens internas do projeto
-fotos/                → Imagens para o README/testes
-🚀 Instalação e Execução
-1️⃣ Instalar dependências
-bash
-Copiar código
-npm install
-2️⃣ Iniciar o aplicativo
-bash
-Copiar código
-npx expo start
-3️⃣ Permitir que outras pessoas acessem o app simultaneamente
-bash
-Copiar código
-npx expo start --tunnel
-Com isso, qualquer pessoa com o QR Code gerado pelo Expo poderá abrir o aplicativo em tempo real no celular.
+export default function RootLayout() {
+  const colorScheme = useColorScheme();
 
-🌐 Como funciona o app
-Para celulares Android/iOS → usa WebView para abrir o site dentro do app
+  return (
+    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      <Stack
+        screenOptions={{
+          headerShown: false, // remove o header de todas as telas
+        }}
+      >
+        {/* Sua tela principal (index.js) será carregada automaticamente */}
+        <Stack.Screen
+          name="modal"
+          options={{
+            presentation: 'modal',
+            title: 'Modal',
+          }}
+        />
+      </Stack>
+      <StatusBar style="auto" />
+    </ThemeProvider>
+  );
+}
+```
 
-Para navegador web → usa iframe para exibir o site
 
-Conecta ao backend através da constante API_URL
+   ## testes do moblie (mobile tests)
 
-Código principal (index.js)
-javascript
-Copiar código
-export const API_URL = "https://back-projeto-2025.vercel.app";
-const siteUrl = 'https://helio000.github.io/web-projeto2/';
-Layout do app (_layout.js)
-Controla tema claro/escuro automaticamente
+## TESTE (TEST) 01
+<img src="fotos/app.png" alt="teste1" width="1000"/>
 
-Remove headers padrão de navegação
+##  TESTE (TEST) 02
+<img src="fotos/app2.png" alt="teste 2" width="1000"/>
 
-Configura a tela principal e telas modais
+## TESTE (TEST) 03
+<img src="fotos/app3.png" alt="teste 3" width="1000"/>
 
+<<<<<<< HEAD
+## TESTE (TEST) 04
+<img src="fotos/app7.png" alt="teste 4" width="1000"/>
+
+## TESTE (TEST) 05
+<img src="fotos/app5.png" alt="teste 5" width="1000"/>
+=======
    ## testes do moblie (mobile tests)
 
 ## TESTE (TEST) 01
@@ -88,17 +157,18 @@ Configura a tela principal e telas modais
 
 ## TESTE (TEST) 08
 <img src="fotos/aplicativo5.png" alt="teste 6" width="1000"/>
+>>>>>>> 21e1caba26f3bff05c9d4578c517a5db7522ed39
 
-bash
-Copiar código
-npm install -g expo-cli
-Build do APK (Android):
+## TESTE (TEST) 06
+<img src="fotos/app6.png" alt="teste 6" width="1000"/>
 
-bash
-Copiar código
-eas build --platform android
-Build do AAB (Android, para publicar na Play Store):
+## TESTE (TEST) 07
+<img src="fotos/aplicativo5.1.png" alt="teste 6" width="1000"/>
 
+<<<<<<< HEAD
+## TESTE (TEST) 08
+<img src="fotos/aplicativo5.png" alt="teste 6" width="1000"/>
+=======
 bash
 Copiar código
 eas build --platform android --profile production
@@ -119,3 +189,4 @@ Pronto para integração futura com backend/API
 Fácil manutenção e atualização
 
 Pode ser publicado futuramente na Play Store
+>>>>>>> 21e1caba26f3bff05c9d4578c517a5db7522ed39
