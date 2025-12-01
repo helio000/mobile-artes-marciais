@@ -63,27 +63,31 @@ Remove headers padrão de navegação
 
 Configura a tela principal e telas modais
 
-📱 Testes do Mobile (Mobile Tests)
-A seguir estão imagens reais do aplicativo em execução:
+   ## testes do moblie (mobile tests)
 
-🧪 TESTE 01
-<img src="/mobile-artes-marciais/fotos/app.png" alt="teste1" width="1000"/>
-🧪 TESTE 02
-<img src="/mobile-artes-marciais/fotos/app2.png" alt="teste2" width="1000"/>
-🧪 TESTE 03
-<img src="/mobile-artes-marciais/fotos/app3.png" alt="teste3" width="1000"/>
-🧪 TESTE 04
-<img src="/mobile-artes-marciais/fotos/app4.png" alt="teste4" width="1000"/>
-🧪 TESTE 05
-<img src="/mobile-artes-marciais/fotos/app5.png" alt="teste5" width="1000"/>
-🧪 TESTE 06
-<img src="/mobile-artes-marciais/fotos/app6.png" alt="teste6" width="1000"/>
-🧪 TESTE 07
-<img src="/mobile-artes-marciais/fotos/app7.png" alt="teste7" width="1000"/>
-🧪 TESTE 08
-<img src="/mobile-artes-marciais/fotos/app8.png" alt="teste8" width="1000"/>
-📦 Gerar APK / AAB (Android)
-Instale Expo CLI globalmente (se ainda não tiver):
+## TESTE (TEST) 01
+<img src="fotos/app.png" alt="teste1" width="1000"/>
+
+##  TESTE (TEST) 02
+<img src="fotos/app2.png" alt="teste 2" width="1000"/>
+
+## TESTE (TEST) 03
+<img src="fotos/app3.png" alt="teste 3" width="1000"/>
+
+## TESTE (TEST) 04
+<img src="fotos/app7.png" alt="teste 4" width="1000"/>
+
+## TESTE (TEST) 05
+<img src="fotos/app5.png" alt="teste 5" width="1000"/>
+
+## TESTE (TEST) 06
+<img src="fotos/app6.png" alt="teste 6" width="1000"/>
+
+## TESTE (TEST) 07
+<img src="fotos/aplicativo5.1.png" alt="teste 6" width="1000"/>
+
+## TESTE (TEST) 08
+<img src="fotos/aplicativo5.png" alt="teste 6" width="1000"/>
 
 bash
 Copiar código
