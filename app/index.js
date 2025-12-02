@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform, SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import { WebView } from 'react-native-webview';
 
-export const API_URL = "https://back-projeto-2025.vercel.app"; // 👈 Aqui
+export const API_URL = "https://back-projeto-2025-12.onrender.com";
 
 
 export default function Index() {
