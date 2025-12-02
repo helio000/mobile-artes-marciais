@@ -6,6 +6,11 @@ cd mobile-artes-marciais
 
 3. ## Instalar dependências (Install dependencies)
 
+
+
+ Install dependencies
+
+
    ```bash
    npm install
    ```
@@ -122,13 +127,13 @@ export default function RootLayout() {
 ## TESTE (TEST) 03
 <img src="fotos/app3.png" alt="teste 3" width="1000"/>
 
-<<<<<<< HEAD
+
 ## TESTE (TEST) 04
 <img src="fotos/app7.png" alt="teste 4" width="1000"/>
 
 ## TESTE (TEST) 05
 <img src="fotos/app5.png" alt="teste 5" width="1000"/>
-=======
+
    ## testes do moblie (mobile tests)
 
 ## TESTE (TEST) 01
@@ -154,7 +159,7 @@ export default function RootLayout() {
 
 ## TESTE (TEST) 08
 <img src="fotos/aplicativo5.png" alt="teste 6" width="1000"/>
->>>>>>> 21e1caba26f3bff05c9d4578c517a5db7522ed39
+
 
 ## TESTE (TEST) 06
 <img src="fotos/app6.png" alt="teste 6" width="1000"/>
@@ -162,10 +167,10 @@ export default function RootLayout() {
 ## TESTE (TEST) 07
 <img src="fotos/aplicativo5.1.png" alt="teste 6" width="1000"/>
 
-<<<<<<< HEAD
+
 ## TESTE (TEST) 08
 <img src="fotos/aplicativo5.png" alt="teste 6" width="1000"/>
-=======
+
 bash
 Copiar código
 eas build --platform android --profile production
@@ -186,4 +191,4 @@ Pronto para integração futura com backend/API
 Fácil manutenção e atualização
 
 Pode ser publicado futuramente na Play Store
->>>>>>> 21e1caba26f3bff05c9d4578c517a5db7522ed39
+
